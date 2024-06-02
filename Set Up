@@ -1,7 +1,7 @@
 step 1: 
 Get FREE API from https://newsapi.org/
 
-step 2:
+step 2: 
 open gedit and name project "News" using following command:
 $ gedit News
 
