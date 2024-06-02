@@ -1,0 +1,10 @@
+step 1: 
+Get FREE API from https://newsapi.org/
+
+step 2:
+open gedit and name project "News" using following command:
+$ gedit News
+
+now copy and paste the script into the notepad that apperared, Then press save.
+Now run the tool using: 
+$ python3 News
