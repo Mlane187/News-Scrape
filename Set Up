@@ -5,6 +5,6 @@ step 2:
 open gedit and name project "News" using following command:
 $ gedit News
 
-now copy and paste the script into the notepad that apperared, Then press save.
+now copy and paste the script into the notepad that apperared,Add ur API key to the dsignated spot in the script, Then press save.
 Now run the tool using: 
 $ python3 News
