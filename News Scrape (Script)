@@ -1,0 +1,43 @@
+
+
+# Your NewsAPI key
+api_key = ''
+
+def get_news(keyword, api_key):
+    # Define the endpoint and parameters for the request
+    url = 'https://newsapi.org/v2/everything'
+    params = {
+        'q': keyword,
+        'apiKey': api_key,
+        'language': 'en',
+        'sortBy': 'relevancy'
+    }
+    
+    # Make the request
+    response = requests.get(url, params=params)
+    
+    # Check for a successful response
+    if response.status_code == 200:
+        data = response.json()
+        return data['articles']
+    else:
+        print(f'Error: {response.status_code}')
+        return None
+
+def print_news(articles):
+    if not articles:
+        print('No articles found.')
+        return
+
+    for article in articles:
+        print(f"Title: {article['title']}")
+        print(f"Source: {article['source']['name']}")
+        print(f"Published At: {article['publishedAt']}")
+        print(f"Description: {article['description']}")
+        print(f"URL: {article['url']}")
+        print('-' * 80)
+
+if __name__ == "__main__":
+    keyword = input("Enter a keyword to search for news: ")
+    articles = get_news(keyword, api_key)
+    print_news(articles)
